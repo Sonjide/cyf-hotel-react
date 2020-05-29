@@ -16,6 +16,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
+  width: 100%;
 }
 
 .App-title {
@@ -25,6 +26,12 @@
 .App-content {
   padding-top: 20px;
   font-size: large;
+}
+
+/* Header.js file - Need to resize the Logo want to put it inside the black header with CYF title */
+.Logo {
+  width: 150px;
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
@@ -55,3 +62,9 @@ tr {
 .card {
   width: 18rem;
 }
+
+/* research - 
+https://css-tricks.com/learning-react-router/ 
+https://reactjs.org/community/examples.html
+
+*/
