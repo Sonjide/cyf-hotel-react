@@ -59,6 +59,10 @@ tr {
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .card {
   width: 18rem;
 }
