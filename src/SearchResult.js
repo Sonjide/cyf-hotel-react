@@ -17,10 +17,11 @@
 // **Test:** Each booking in your table should show the number of nights in a separate column. For example, Mr John Doe has a booking for **2** nights.
 
 import React from "react";
-import Moment from "moment";
+import moment from "moment";
 
 function SearchResult(props) {
   //console.log(props)
+  //moment is a function that is returning an object .diff is the key that returning
   return (
     <div>
       <table className="table">
@@ -37,8 +38,9 @@ function SearchResult(props) {
             <th scope="col">Check Out Date</th>
           </tr>
         </thead>
-        ß
         {props.customerInfo.map((reservation, index) => {
+          // here I used a variable name for calculating the "numberOfNight" (units) using a function called moment which returns the object(reservation from the json.file with all customer info).checkoutdata(which is a key).diff(which is a method) that returns a 2 strings called reservation.checkInDate and days in units.
+          // const numberOfNights = moment(reservation.checkOutDate).diff(reservation.checkInDate, "days");
           return (
             <tbody key={index}>
               <tr>
@@ -48,10 +50,16 @@ function SearchResult(props) {
                 <td>{reservation.surname}</td>
                 <td>{reservation.email}</td>
                 <td>{reservation.roomId}</td>
-                <td>{reservation.numberOfNights}</td>
+                {/* <td>{numberOfNights}</td> */}
+                <td>
+                  {moment(reservation.checkOutDate).diff(
+                    reservation.checkInDate,
+                    "days"
+                  )}
+                  {/* the above line of code is the same as variable name numberOfNights on line 43 and 53*/}
+                </td>
                 <td>{reservation.checkInDate}</td>
                 <td>{reservation.checkOutDate}</td>
-                <td>return ({})</td>
               </tr>
             </tbody>
           );
