@@ -66,6 +66,18 @@ ul {
 .card {
   width: 18rem;
 }
+/* TouristInfoCard.js */
+
+.rowFlexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.columnWidth {
+  width: 33.333333%;
+}
 
 /* research - 
 https://css-tricks.com/learning-react-router/ 
