@@ -9,18 +9,25 @@ Test: The restaurant orders should render on the page. The restaurant section do
 
 import React, { useState } from "react";
 
-const Restaurant = () => {
+function Restaurant() {
+  function orderOne() {
+    setOrders(orders + 1);
+  }
+
   const [orders, setOrders] = useState(0);
   return (
     <div>
       <h3>Restaurant Orders</h3>
       <ul>
         <li>
-          Pizzas: {orders} <button className="btn btn-primary">Add</button>
+          Pizzas: {orders}
+          <button onClick={orderOne} className="btn btn-primary">
+            Add
+          </button>
         </li>
       </ul>
     </div>
   );
-};
+}
 
 export default Restaurant;
