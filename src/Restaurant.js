@@ -8,6 +8,7 @@ Test: The restaurant orders should render on the page. The restaurant section do
 */
 
 import React, { useState } from "react";
+import RestaurantButton from "./RestaurantButton";
 
 function Restaurant() {
   function orderOne() {
@@ -21,9 +22,7 @@ function Restaurant() {
       <ul>
         <li>
           Pizzas: {orders}
-          <button onClick={orderOne} className="btn btn-primary">
-            Add
-          </button>
+          <RestaurantButton handler={orderOne} />
         </li>
       </ul>
     </div>
