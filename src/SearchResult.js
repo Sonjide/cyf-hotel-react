@@ -21,6 +21,7 @@ import moment from "moment";
 
 function SearchResult(props) {
   //console.log(props)
+  //moment is a function that is returning an object .diff is the key that returning
   return (
     <div>
       <table className="table">

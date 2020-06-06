@@ -13,7 +13,9 @@ function Header() {
         <div className="Logo">
           <img src="https://image.flaticon.com/icons/svg/139/139899.svg" />
         </div>
-        <header className="App-header">CYF Hotel</header>
+        <div>
+          <header className="App-header"> CYF Hotel </header>
+        </div>
       </div>
     </div>
   );
