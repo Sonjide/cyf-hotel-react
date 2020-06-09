@@ -53,6 +53,7 @@
 /* For example, 4 blocks that 'live' together in a row, and then get stacked on mobile */
 /* they should be together inside a wrapper with the class 'row' */
 
+/* css class row is container for columns  */
 .row {
   display: flex;
   flex-wrap: wrap;

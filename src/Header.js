@@ -8,15 +8,14 @@ import React from "react";
 
 function Header() {
   return (
-    <div>
-      <div className="page-header">
-        <div className="Logo">
-          <img src="https://image.flaticon.com/icons/svg/139/139899.svg" />
-        </div>
-        <div>
-          <header className="App-header"> CYF Hotel </header>
-        </div>
-      </div>
+    <div className="page-header">
+      <header className="App-header">
+        <img
+          className="App-logo"
+          src="https://image.flaticon.com/icons/svg/139/139899.svg"
+        />
+        CYF Hotel
+      </header>
     </div>
   );
 }
