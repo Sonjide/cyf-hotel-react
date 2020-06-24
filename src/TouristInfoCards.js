@@ -46,10 +46,10 @@ function TouristInfoCards() {
             <img
               src="https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2568&q=80"
               className="card-img-top"
-            />{" "}
+            />
             <div className="card-body">
               <a
-                href="https://peoplemakeglasgow.com"
+                href="https://www.visitmanchester.com"
                 className="btn btn-primary"
               >
                 Visit Manchester
@@ -65,10 +65,7 @@ function TouristInfoCards() {
               className="card-img-top"
             />
             <div className="card-body">
-              <a
-                href="https://peoplemakeglasgow.com"
-                className="btn btn-primary"
-              >
+              <a href="https://www.visitlondon.com" className="btn btn-primary">
                 Visit London
               </a>
             </div>

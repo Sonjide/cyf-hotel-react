@@ -136,6 +136,10 @@ A hotel booking application in React. Homework for the [CodeYourFuture React mod
 
 #### 16. Highlight booking row when clicked
 
+https://syllabus.codeyourfuture.io/react/week-1/lesson.html
+
+https://github.com/Sonjide/cyf-hotel-react/blob/master/README.md
+
 **Instructions:** Within the `<SearchResults />` component or its child components, add an `onClick` handler to each row in the table (hint: on the `<tr>` element). When clicked, the row is "selected" and highlighted with a different colour. When clicked again, the row is unselected and the coloured highlighting is removed.
 
 **Hint:** Use a new state variable for each row to record if the row is selected or not, and use this value to set a class to the `className` prop of the row.

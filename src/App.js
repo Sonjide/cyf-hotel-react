@@ -12,7 +12,6 @@ const App = () => {
       <Header />
       <TouristInfoCards />
       <Bookings />
-      {/* level 2 */}
       <Restaurant />
       <Footer
         fakeAddress={[

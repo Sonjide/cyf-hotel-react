@@ -7,7 +7,7 @@ Instructions: Within the src/App.js file, render the <Restaurant /> component (t
 Test: The restaurant orders should render on the page. The restaurant section does now appears on the webpage.
 */
 
-import React, { useState } from "react";
+import React from "react";
 import Order from "./Order";
 
 function Restaurant() {
@@ -15,9 +15,15 @@ function Restaurant() {
     <div>
       <h3>Restaurant Orders</h3>
       <ul>
-        <Order orderType="Pizzas" />
-        <Order orderType="Salads" />
-        <Order orderType="Chocolate cake" />
+        <li>
+          <Order orderType="Pizzas" />
+        </li>
+        <li>
+          <Order orderType="Salads" />
+        </li>
+        <li>
+          <Order orderType="Chocolate cake" />
+        </li>
       </ul>
     </div>
   );

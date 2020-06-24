@@ -1,25 +1,40 @@
 import React, { useState, useEffect } from "react";
 import Search from "./Search.js";
 import SearchResult from "./SearchResult.js";
-import FakeBookings from "./data/fakeBookings.json";
 
 function Bookings() {
   const [bookings, setBookings] = useState([]);
+
   const search = searchVal => {
-    console.info("TO DO!", searchVal);
+    //console.info("TO DO!", searchVal);
+
+    const result = bookings.filter(
+      person =>
+        person.firstName.toUpperCase() === searchVal.toUpperCase() ||
+        person.surname.toUpperCase() === searchVal.toUpperCase()
+    );
+    setBookings(result);
   };
+
   useEffect(() => {
-    fetch(`https://cyf-react.glitch.me`)
+    fetch(`https://cyf-react.glitch.me/delayed`)
       .then(res => res.json())
-      .then(data => setBookings(data));
+      .then(data => {
+        console.log(data);
+        setBookings(data);
+      });
   }, []);
 
   return (
     <div className="App-content">
       <div className="container">
         <Search search={search} />
-        {/* line 16 - related to SearchResult.js */}
-        <SearchResult customerInfo={bookings} />
+        {bookings.length > 0 ? (
+          <SearchResult customerInfo={bookings} />
+        ) : (
+          <p className="loading">Loading Customer Data Now...</p>
+        )}
+        {/* <SearchResults customerInfo={bookings} /> */}
       </div>
     </div>
   );
