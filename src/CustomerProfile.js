@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SearchResult from "./SearchResult";
-import TableRow from "./TableRow";
 
 const CustomerProfile = props => {
   const [customerProfile, setCustomerProfile] = useState([]);
   useEffect(() => {
-    fetch(`https://cyf-react.glitch.me/customers/{props.setId}`)
+    fetch(`https://cyf-react.illicitonion.com/customer/{props.id}`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -32,8 +30,3 @@ const CustomerProfile = props => {
 export default CustomerProfile;
 
 // check Pokedex excercise
-{
-  /* <div>
-<button className="tableButton">{props.id} Show Profile</button>
-</div> */
-}

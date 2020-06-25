@@ -4,7 +4,10 @@ import CustomerProfile from "./CustomerProfile";
 
 function SearchResult(props) {
   const [id, setId] = useState("");
-  //console.log(props);
+  const filterCustomerInfo = props.customerInfo.filter(
+    customer => customer.firstName === props.search
+  );
+
   return (
     <table className="table">
       <thead>
@@ -21,7 +24,7 @@ function SearchResult(props) {
         </tr>
       </thead>
       <tbody>
-        {props.customerInfo.map((reservation, index) => {
+        {filterCustomerInfo.map((reservation, index) => {
           return <TableRow reservation={reservation} key={index} />;
         })}
         <CustomerProfile id={id} setId={setId} />

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import moment from "moment";
-import CustomerProfile from "./CustomerProfile";
 
 function TableRow(props) {
   const [isHighlighted, setIsHightlighted] = useState(false);

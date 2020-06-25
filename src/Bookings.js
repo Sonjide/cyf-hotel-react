@@ -4,6 +4,7 @@ import SearchResult from "./SearchResult.js";
 
 function Bookings() {
   const [bookings, setBookings] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const search = searchVal => {
     //console.info("TO DO!", searchVal);
@@ -17,7 +18,7 @@ function Bookings() {
   };
 
   useEffect(() => {
-    fetch(`https://cyf-react.glitch.me/delayed`)
+    fetch(`https://cyf-react.illicitonion.com`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -28,9 +29,9 @@ function Bookings() {
   return (
     <div className="App-content">
       <div className="container">
-        <Search search={search} />
+        <Search search={search} setSearchTerm={setSearchTerm} />
         {bookings.length > 0 ? (
-          <SearchResult customerInfo={bookings} />
+          <SearchResult customerInfo={bookings} search={searchTerm} />
         ) : (
           <p className="loading">Loading Customer Data Now...</p>
         )}
@@ -41,11 +42,3 @@ function Bookings() {
 }
 
 export default Bookings;
-
-// #### 6. Show more bookings in the table
-
-// **Instructions:** Instead of using your hard-coded data in the `<SearchResults />` component, load data from the `src/data/fakeBookings.json` file in the `<Bookings />` component and pass it as a prop to `<SearchResults />`. All the bookings in `src/data/fakeBookings.json` should now be displayed in your table.
-
-// **Hint:** Look in the `<Bookings />` component for how to import data from a JSON file.
-
-// **Test:** All the bookings in the file `src/data/fakeBookings.json` should be displayed in your table.
